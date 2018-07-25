@@ -10,14 +10,15 @@ public class loginPage {
 	
 	public void url(String url) 
 	{
-		DriverFactory.getDriver().get("http://server.target1.com.br:8895");;
+		dsl.maximizaJanela();
+		DriverFactory.getDriver().get(url);
 	}
 	
 	public void finalizaTest() {
 		DriverFactory.killDriver();
 	}
 	
-	public void aguardaCarregarPagina(int tempo) throws InterruptedException
+	public void aguardaCarregarPagina(int tempo) throws Exception
     {
         dsl.esperaCarregar(tempo);
     }
@@ -37,11 +38,11 @@ public class loginPage {
         dsl.clicarBotaoBy(By.tagName("button"));
     }
 
-    public void selecionarEscola()
+    public void selecionarEscola() throws Exception
     {
         DriverFactory.getDriver().findElement(By.xpath("//app-root/app-trocaescola/main[@role='main']/div[@class='content-960 mobile-row']//select")).click();
-        
+        dsl.esperaCarregar(3000);
         DriverFactory.getDriver().findElement(By.cssSelector("[value='276']")).click();
-    }
-	
+    }	
+    
 }

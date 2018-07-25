@@ -16,11 +16,11 @@ public class DriverFactory {
 	@Before
 	public static WebDriver getDriver() {
 		if (driver == null)
-			System.setProperty("webdriver.gecko.driver", "/home/target/driver/geckodriver"); // - utilizar no linux
-			driver.manage().window().maximize();
-		// driver = new FirefoxDriver();
-		// driver = new ChromeDriver();
-		// driver = new InternetExplorerDriver(); 
+			System.setProperty("webdriver.chrome.driver", "/home/target/driver/chromedriver"); // Driver Chrome
+		// System.setProperty("webdriver.gecko.driver",
+		// "/home/target/driver/geckodriver"); //Driver Firefox
+		WebDriver driver = new ChromeDriver();
+		// WebDriver driver = new FirefoxDriver();
 
 		return driver;
 	}

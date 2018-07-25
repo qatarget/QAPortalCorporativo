@@ -17,6 +17,7 @@ import qa.target.portalcorporativo.core.DriverFactory;
 public class DSL {
 
 	
+	
 	private int randomiza(int n) {
         int ranNum = (int) (Math.random() * n);
 		return ranNum;
@@ -161,11 +162,9 @@ public class DSL {
         return emailAleatorio.toString();
     }	
 	
-	public void esperaCarregar(int tempo) throws InterruptedException
+	public void esperaCarregar(int tempo) throws Exception
     {
-        Thread.sleep(tempo);
-        
-        //GetDriver().Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(tempo);
+        DriverFactory.getDriver().manage().timeouts().wait(tempo);
 
     } 
 	
@@ -185,6 +184,9 @@ public class DSL {
         DriverFactory.getDriver().findElement(by).click();
     }
 
-
+	public void maximizaJanela() {
+		
+		DriverFactory.getDriver().manage().window().maximize();
+	}
 	
 }

@@ -13,9 +13,11 @@ public class testeLogin {
 	
 	
 	@Test
-	public void deveRealizarAcessoSistema() {
+	public void deveRealizarAcessoSistema() throws Exception {		
 		
-		
+		page.maximizaJanela();
+		page.url("http://server.target1.com.br:8895");
+		page.aguardaCarregarPagina(3000);
 		page.SetEmail("danilo@dmts.com.br");
 		page.SetSenha("123456");
 		page.ClicaBotao();		
