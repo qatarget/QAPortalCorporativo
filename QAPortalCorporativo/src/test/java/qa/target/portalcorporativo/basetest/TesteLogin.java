@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import qa.target.portalcorporativo.basepage.loginPage;
 
-public class testeLogin {
+public class TesteLogin {
 
 	private DSL dsl = new DSL();
 	private loginPage page = new loginPage();
