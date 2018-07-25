@@ -15,12 +15,13 @@ public class DriverFactory {
 
 	@Before
 	public static WebDriver getDriver() {
-		if (driver == null)
+		if (driver == null) {
 			System.setProperty("webdriver.chrome.driver", "/home/target/driver/chromedriver"); // Driver Chrome
-		// System.setProperty("webdriver.gecko.driver",
-		// "/home/target/driver/geckodriver"); //Driver Firefox
-		WebDriver driver = new ChromeDriver();
-		// WebDriver driver = new FirefoxDriver();
+			// System.setProperty("webdriver.gecko.driver",
+			// "/home/target/driver/geckodriver"); //Driver Firefox
+			driver = new ChromeDriver();
+			// WebDriver driver = new FirefoxDriver();
+		}
 
 		return driver;
 	}
