@@ -164,7 +164,7 @@ public class DSL {
 	
 	public void esperaCarregar(int tempo) throws Exception
     {
-        DriverFactory.getDriver().manage().timeouts().wait(tempo);
+        Thread.sleep(tempo);
 
     } 
 	
