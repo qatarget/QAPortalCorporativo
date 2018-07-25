@@ -7,8 +7,8 @@ public class MenuGerencialAreaPage {
 
 	private DSL dsl = new DSL();
 
-	public void SetClicarMenu(By by) {
-		dsl.clicarBotaoBy(by);
+	public void SetClicarMenuGerencial() {
+		dsl.clicarBotaoBy(By.xpath("//ul[@class='style-hover']//a[@title='Gerencial'][contains(text(),'Gerencial')]"));
 	}
 
 	public void aguardarCarregarPagina(int tempo) throws InterruptedException  {

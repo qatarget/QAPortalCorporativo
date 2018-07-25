@@ -26,6 +26,11 @@ public class DSL {
 
 	/********* CNPJ, CPF, Pessoa, Empresa e E-mail ************/
 
+	/**
+	 * Gera CPF Aleatório com pontos ou sem pontos.
+	 * @param comPontos
+	 * @return
+	 */
 	public String geracpf(boolean comPontos) {
 		int n = 9;
 		int n1 = randomiza(n);
@@ -238,8 +243,8 @@ public class DSL {
 		return mesorregiaoAleatorio.toString();
 	}
 
-	public void esperaCarregar(int tempo) throws InterruptedException  {
-		
+	public void esperaCarregar(int tempo) throws InterruptedException {
+
 		Thread.sleep(tempo);
 
 	}
