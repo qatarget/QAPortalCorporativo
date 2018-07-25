@@ -3,13 +3,14 @@ import org.openqa.selenium.By;
 import qa.target.portalcorporativo.core.DSL;
 import qa.target.portalcorporativo.core.DriverFactory;
 
-public class LoginPage {
+
+public class loginPage {
 
 	private DSL dsl = new DSL();
 	
 	public void url(String url) 
 	{
-		DriverFactory.getDriver().navigate().to(url);
+		DriverFactory.getDriver().get("http://server.target1.com.br:8895");;
 	}
 	
 	public void finalizaTest() {
@@ -36,10 +37,10 @@ public class LoginPage {
         dsl.clicarBotaoBy(By.tagName("button"));
     }
 
-    public void selecionarEscola() throws InterruptedException
+    public void selecionarEscola()
     {
         DriverFactory.getDriver().findElement(By.xpath("//app-root/app-trocaescola/main[@role='main']/div[@class='content-960 mobile-row']//select")).click();
-        dsl.esperaCarregar(3000);
+        
         DriverFactory.getDriver().findElement(By.cssSelector("[value='276']")).click();
     }
 	

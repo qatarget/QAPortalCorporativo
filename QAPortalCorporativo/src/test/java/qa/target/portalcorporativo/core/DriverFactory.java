@@ -1,33 +1,35 @@
 package qa.target.portalcorporativo.core;
+
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class DriverFactory {
 
-        private static WebDriver driver;
+	private static WebDriver driver;
 
-        @Before
-        public static WebDriver getDriver()
-        {
-            if (driver == null)
-                System.setProperty("webdriver.gecko.driver", "/home/target/driver/chromedriver"); //- utilizar no linux
-                //driver = new FirefoxDriver();
-                //driver = new ChromeDriver();
+	private DriverFactory() {
+	}
 
-            return driver;
-        }
+	@Before
+	public static WebDriver getDriver() {
+		if (driver == null)
+			System.setProperty("webdriver.gecko.driver", "/home/target/driver/geckodriver"); // - utilizar no linux
+			driver.manage().window().maximize();
+		// driver = new FirefoxDriver();
+		// driver = new ChromeDriver();
+		// driver = new InternetExplorerDriver(); 
 
-        public static void killDriver()
-        {
-            if (driver != null)
-            {
-                driver.quit();
-                driver = null;
+		return driver;
+	}
 
-            }
-        }
+	public static void killDriver() {
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+
+		}
+	}
 }
-
-
