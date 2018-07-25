@@ -15,7 +15,7 @@ public class TesteLogin {
 	@Test
 	public void deveRealizarAcessoSistema() throws InterruptedException 
 	{
-		System.setProperty("webdriver.gecko.driver", "/home/target/driver/chromedriver"); //- utilizar no linux
+		
 		dsl.esperaCarregar(3000);
 		DriverFactory.getDriver().manage().window().maximize();
 		dsl.esperaCarregar(3000);
