@@ -1,5 +1,6 @@
 package qa.target.portalcorporativo.core;
 
+import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,6 +27,7 @@ public class DriverFactory {
 		return driver;
 	}
 
+	@After
 	public static void killDriver() {
 		if (driver != null) {
 			driver.quit();

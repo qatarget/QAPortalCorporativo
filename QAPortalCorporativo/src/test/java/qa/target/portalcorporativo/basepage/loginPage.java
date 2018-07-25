@@ -18,8 +18,8 @@ public class loginPage {
 		DriverFactory.killDriver();
 	}
 	
-	public void aguardaCarregarPagina(int tempo) throws Exception
-    {
+	public void aguardaCarregarPagina(int tempo) throws InterruptedException
+	{
         dsl.esperaCarregar(tempo);
     }
 
@@ -38,7 +38,7 @@ public class loginPage {
         dsl.clicarBotaoBy(By.tagName("button"));
     }
 
-    public void selecionarEscola() throws Exception
+    public void selecionarEscola() throws InterruptedException
     {
         DriverFactory.getDriver().findElement(By.xpath("//app-root/app-trocaescola/main[@role='main']/div[@class='content-960 mobile-row']//select")).click();
         dsl.esperaCarregar(3000);
