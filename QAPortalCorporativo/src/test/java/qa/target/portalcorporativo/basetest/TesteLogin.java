@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import qa.target.portalcorporativo.basepage.loginPage;
 
-public class testeLogin {
+public class TesteLogin {
 
 	private DSL dsl = new DSL();
 	private loginPage page = new loginPage();
@@ -13,16 +13,19 @@ public class testeLogin {
 	
 	
 	@Test
-	public void deveRealizarAcessoSistema() throws Exception {		
+	public void deveRealizarAcessoSistema() throws InterruptedException {		
 		
 		
-		page.url("http://server.target1.com.br:8895");
+		page.url("https://portal-stage.portalcna.com.br");
 		page.aguardaCarregarPagina(3000);
 		page.SetEmail("danilo@dmts.com.br");
-		page.SetSenha("123456");
-		page.ClicaBotao();		
-		page.selecionarEscola();		
+		page.SetSenha("123456");		
 		page.ClicaBotao();
+		page.aguardaCarregarPagina(3000);
+		page.selecionarEscola();	
+		page.aguardaCarregarPagina(3000);
+		page.ClicaBotao();
+		page.aguardaCarregarPagina(5000);
 		
 	}
 }
