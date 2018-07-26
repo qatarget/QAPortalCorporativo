@@ -15,14 +15,14 @@ public class TesteMenuGerencialArea {
 		login.deveRealizarAcessoSistema();
 		page.aguardarCarregarPagina(5000);
 		page.SetClicarMenuGerencial();
-		page.SetClicarSubMenu("√ÅREA");
+		page.SetClicarSubMenu("¡REA");
 		page.aguardarCarregarPagina(3000);
 		page.SetClicarBotaoNovoItem();
 		page.aguardarCarregarPagina(2000);
 		page.SetDepartamento("nome");
 		page.aguardarCarregarPagina(1000);
 		page.SetEmail("emailResponsavel");
-		page.SetTextArea("textoContato", "Texto de Descri√ß√£o");
+		page.SetTextArea("textoContato", "Texto de DescriÁ„o");
 		page.SetEhAtivo("ehAtivo");
 		page.aguardarCarregarPagina(2000);
 		page.SetClicarComboBox();
