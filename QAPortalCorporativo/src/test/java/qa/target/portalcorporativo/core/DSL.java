@@ -27,7 +27,7 @@ public class DSL {
 	/********* CNPJ, CPF, Pessoa, Empresa e E-mail ************/
 
 	/**
-	 * Gera CPF Aleatório com pontos ou sem pontos.
+	 * Gera CPF AleatÃ³rio com pontos ou sem pontos.
 	 * @param comPontos
 	 * @return
 	 */
@@ -110,12 +110,12 @@ public class DSL {
 
 	public String geraNomeAleatorio() {
 		String[] nomes = { "Antonio", "Rafael", "Bruno", "Marcelo", "Alberto", "Pedro", "Anderson", "Airton", "Sidney",
-				"Wilson", "Carlos", "C�ndido", "Hugo", "Jo�o", "Mauro", "Leonardo", "Natanael", "Reinaldo", "Orlando",
-				"Tiago", "Gildo", "Alfredo", "Maur�cio", "Jurandir", "Paulo", "Juv�ncio", "Daniel", "Jair", "Juvenal",
+				"Wilson", "Carlos", "Cï¿½ndido", "Hugo", "Joï¿½o", "Mauro", "Leonardo", "Natanael", "Reinaldo", "Orlando",
+				"Tiago", "Gildo", "Alfredo", "Maurï¿½cio", "Jurandir", "Paulo", "Juvï¿½ncio", "Daniel", "Jair", "Juvenal",
 				"Jorge" };
 		String[] sobrenomes = { "Afonso", "Balera", "Seco", "Vieira", "Mendes", "Miyahira", "Garcia", "Cunha", "Santos",
-				"Fl�vio" };
-		String[] ultimoNome = { "Magalh�es", "Alves", "Silva", "Pereira", "Mathias", "Camargo", "Moraes", "Rodrigues",
+				"Flï¿½vio" };
+		String[] ultimoNome = { "Magalhï¿½es", "Alves", "Silva", "Pereira", "Mathias", "Camargo", "Moraes", "Rodrigues",
 				"Fonseca", "Azevedo" };
 
 		StringBuilder nomeAleatorio = new StringBuilder();
@@ -127,10 +127,10 @@ public class DSL {
 	}
 
 	public String geraEmpresaAleatorio() {
-		String[] nomes = { "atendimento", "contato", "orcamento", "despesa", "RH", "dp", "recursos.humanos", "deposito",
+		String[] nomes = { "atendimento", "contato", "orcamento", "despesa", "RH", "dp_", "recursos.humanos", "deposito",
 				"gerente", "gestor", "diretoria", "almoxarifado", "balconista" };
 		String[] sobrenomes = { "Auto", "Lar", "Seco", "Vieira", "Mendes", "Miyahira", "Garcia", "Cunha", "Santos",
-				"Flávio" };
+				"FlÃ¡vio" };
 		String[] ultimoNome = { "LTDA", "ME", "EIRELI", "S/A", "EPP" };
 
 		StringBuilder empresaAleatorio = new StringBuilder();
@@ -156,10 +156,10 @@ public class DSL {
 	}
 
 	public String geraEstadoAleatorio() {
-		String[] estados = { "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
-				"Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Paraná",
-				"Paraíba", "Pará", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul",
-				"Rondônia", "Roraima", "Santa Catarina", "Sergipe", "São Paulo", "Tocantins" };
+		String[] estados = { "Acre", "Alagoas", "AmapÃ¡", "Amazonas", "Bahia", "CearÃ¡", "Distrito Federal",
+				"EspÃ­rito Santo", "GoiÃ¡s", "MaranhÃ£o", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "ParanÃ¡",
+				"ParaÃ­ba", "ParÃ¡", "Pernambuco", "PiauÃ­", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul",
+				"RondÃ´nia", "Roraima", "Santa Catarina", "Sergipe", "SÃ£o Paulo", "Tocantins" };
 		String[] tag = { "TARGET QA" };
 		StringBuilder estadosAleatorio = new StringBuilder();
 		estadosAleatorio.append(estados[new Random().nextInt(26)]).append(" ").append(tag[new Random().nextInt(1)])
@@ -168,9 +168,9 @@ public class DSL {
 	}
 
 	public String GeraMunicipioAleatorio() {
-		String[] municipio = { "Abadia dos Dourados", "Abaeté", "Abre-Campo", "Acaiaca", "Açucena", "Água Boa",
-				"Água Comprida", "Aguanil", "Águas Formosas", "Águas Vermelhas", "Aimorés", "Aiuruoca", "Alagoa",
-				"Albertina", "Além Paraíba", "Alfenas", "Alfredo Vasconcelos", "Almenara", "Alpercata" };
+		String[] municipio = { "Abadia dos Dourados", "AbaetÃ©", "Abre-Campo", "Acaiaca", "AÃ§ucena", "Ã�gua Boa",
+				"Ã�gua Comprida", "Aguanil", "Ã�guas Formosas", "Ã�guas Vermelhas", "AimorÃ©s", "Aiuruoca", "Alagoa",
+				"Albertina", "AlÃ©m ParaÃ­ba", "Alfenas", "Alfredo Vasconcelos", "Almenara", "Alpercata" };
 		String[] tag = { "TARGET QA" };
 		StringBuilder estadosAleatorio = new StringBuilder();
 		estadosAleatorio.append(municipio[new Random().nextInt(26)]).append(" ").append(tag[new Random().nextInt(1)])
@@ -188,13 +188,13 @@ public class DSL {
 	}
 
 	public String GeraDepartamentoAleatorio() {
-		String[] departamento = { "Financeiro", "RH", "Comercial", "Tecnologia", "Administrativo", "Produção",
-				"Controladoria Auditoria", "Contas a Pagar", "Tesouraria", "Contas a Receber", "Orçamentos",
-				"Analise de Crédito", "Cobrança", "Relações com Mercadorias", "Manutenção", "Suprimentos", "PCP",
+		String[] departamento = { "Financeiro", "RH", "Comercial", "Tecnologia", "Administrativo", "ProduÃ§Ã£o",
+				"Controladoria Auditoria", "Contas a Pagar", "Tesouraria", "Contas a Receber", "OrÃ§amentos",
+				"Analise de CrÃ©dito", "CobranÃ§a", "RelaÃ§Ãµes com Mercadorias", "ManutenÃ§Ã£o", "Suprimentos", "PCP",
 				"Engenharia Desenvolvimento de Novos Produtos", "Logistica estocagem prod. acabado",
 				"Controle de Qualidade", "Planejamento / Controle", "Suporte a Clientes", "Marketing", "Contabilidade",
-				"Faturamento Livros Fiscais", "Controle Patrimonial", "Importação", "Relações Publicas", "Vendas",
-				"Exportação" };
+				"Faturamento Livros Fiscais", "Controle Patrimonial", "ImportaÃ§Ã£o", "RelaÃ§Ãµes Publicas", "Vendas",
+				"ExportaÃ§Ã£o" };
 		String[] tag = { "TARGET QA" };
 		StringBuilder departamentoAleatorio = new StringBuilder();
 		departamentoAleatorio.append(departamento[new Random().nextInt(30)]).append(" ")
@@ -204,38 +204,38 @@ public class DSL {
 
 	public String GeraMesorregiaoAleatorio() {
 		String[] mesorregiao = { "Agreste Alagoano", "Agreste Paraibano", "Agreste Pernambucano", "Agreste Potiguar",
-				"Agreste Sergipano", "Araraquara/Central Paulista", "Araçatuba", "Assis", "Baixadas Litorâneas",
-				"Baixo Amazonas", "Bauru", "Borborema", "Campinas", "Campo das Vertentes", "Central Espírito-Santense",
-				"Central Mineira", "Central Potiguar", "Centro Amazonense", "Centro de Goiás", "Centro Fluminense",
+				"Agreste Sergipano", "Araraquara/Central Paulista", "AraÃ§atuba", "Assis", "Baixadas LitorÃ¢neas",
+				"Baixo Amazonas", "Bauru", "Borborema", "Campinas", "Campo das Vertentes", "Central EspÃ­rito-Santense",
+				"Central Mineira", "Central Potiguar", "Centro Amazonense", "Centro de GoiÃ¡s", "Centro Fluminense",
 				"Centro Maranhense", "Centro Ocidental Paranaense", "Centro Ocidental Rio-Grandense",
 				"Centro Oriental Paranaense", "Centro Oriental Rio-Grandense", "Centro-Norte Baiano",
 				"Centro-Norte de Mato Grosso do Sul", "Centro - Norte Piauiense", "Centro - Sul Baiano",
 				"Centro - Sul Cearense", "Centro - Sul Mato - Grossense", "Centro - Sul Paranaense", "Distrito Federal",
-				"Extremo Oeste Baiano", "Grande Florianópolis", "Itapetininga", "Jaguaribe", "Jequitinhonha",
-				"Leste Alagoano", "Leste de Goiás", "Leste de Mato Grosso do Sul", "Leste Maranhense", "Leste Potiguar",
-				"Leste Rondoniense", "Leste Sergipano", "Litoral Norte Espírito - Santense", "Litoral Sul Paulista",
-				"Macro Metropolitana Paulista", "Madeira - Guaporé", "Marajó", "Marília", "Mata Paraibana",
-				"Mata Pernambucana", "Metropolitana de Belo Horizonte", "Metropolitana de Belém",
+				"Extremo Oeste Baiano", "Grande FlorianÃ³polis", "Itapetininga", "Jaguaribe", "Jequitinhonha",
+				"Leste Alagoano", "Leste de GoiÃ¡s", "Leste de Mato Grosso do Sul", "Leste Maranhense", "Leste Potiguar",
+				"Leste Rondoniense", "Leste Sergipano", "Litoral Norte EspÃ­rito - Santense", "Litoral Sul Paulista",
+				"Macro Metropolitana Paulista", "Madeira - GuaporÃ©", "MarajÃ³", "MarÃ­lia", "Mata Paraibana",
+				"Mata Pernambucana", "Metropolitana de Belo Horizonte", "Metropolitana de BelÃ©m",
 				"Metropolitana de Curitiba", "Metropolitana de Fortaleza", "Metropolitana de Porto Alegre",
-				"Metropolitana de Salvador", "Metropolitana de São Paulo", "Metropolitana do Recife",
+				"Metropolitana de Salvador", "Metropolitana de SÃ£o Paulo", "Metropolitana do Recife",
 				"Metropolitana do Rio de Janeiro", "Nordeste Baiano", "Nordeste Mato-Grossense", "Nordeste Paraense",
-				"Nordeste Rio-Grandense", "Noroeste Cearense", "Noroeste de Goiás", "Noroeste de Minas",
-				"Noroeste Espírito-Santense", "Noroeste Fluminense", "Noroeste Paranaense", "Noroeste Rio-Grandense",
-				"Norte Amazonense", "Norte Catarinense", "Norte Cearense", "Norte Central Paranaense", "Norte de Goiás",
-				"Norte de Minas", "Norte de Roraima", "Norte do Amapá", "Norte Fluminense", "Norte Maranhense",
+				"Nordeste Rio-Grandense", "Noroeste Cearense", "Noroeste de GoiÃ¡s", "Noroeste de Minas",
+				"Noroeste EspÃ­rito-Santense", "Noroeste Fluminense", "Noroeste Paranaense", "Noroeste Rio-Grandense",
+				"Norte Amazonense", "Norte Catarinense", "Norte Cearense", "Norte Central Paranaense", "Norte de GoiÃ¡s",
+				"Norte de Minas", "Norte de Roraima", "Norte do AmapÃ¡", "Norte Fluminense", "Norte Maranhense",
 				"Norte Mato-Grossense", "Norte Piauiense", "Norte Pioneiro Paranaense", "Ocidental do Tocantins",
 				"Oeste Catarinense", "Oeste de Minas", "Oeste Maranhense", "Oeste Paranaense", "Oeste Potiguar",
 				"Oriental do Tocantins", "Pantanais Sul - Mato - Grossenses", "Piracicaba", "Presidente Prudente",
-				"Ribeirão Preto", "Serrana", "Sertão Alagoano", "Sertão Paraibano", "Sertão Pernambucano",
-				"Sertão Sergipano", "Sertões Cearenses", "Sudeste Mato-Grossense", "Sudeste Paraense",
+				"RibeirÃ£o Preto", "Serrana", "SertÃ£o Alagoano", "SertÃ£o Paraibano", "SertÃ£o Pernambucano",
+				"SertÃ£o Sergipano", "SertÃµes Cearenses", "Sudeste Mato-Grossense", "Sudeste Paraense",
 				"Sudeste Paranaense", "Sudeste Piauiense", "Sudeste Rio-Grandense", "Sudoeste Amazonense",
 				"Sudoeste de Mato Grosso do Sul", "Sudoeste Mato - Grossense", "Sudoeste Paraense",
 				"Sudoeste Paranaense", "Sudoeste Piauiense", "Sudoeste Rio-Grandense", "Sul Amazonense", "Sul Baiano",
-				"Sul Catarinense", "Sul Cearense", "Sul de Roraima", "Sul do Amapá", "Sul e Sudoeste de Minas",
-				"Sul Espírito - Santense", "Sul Fluminense", "Sul Goiano", "Sul Maranhense",
-				"São Francisco Pernambucano", "São José do Rio Preto", "Triângulo Mineiro e Alto Paranaíba",
-				"Vale do Acre", "Vale do Itajaí", "Vale do Juruá", "Vale do Mucuri", "Vale do Paraíba Paulista",
-				"Vale do Rio Doce", "Vale São - Franciscano da Bahia", "Zona da Mata" };
+				"Sul Catarinense", "Sul Cearense", "Sul de Roraima", "Sul do AmapÃ¡", "Sul e Sudoeste de Minas",
+				"Sul EspÃ­rito - Santense", "Sul Fluminense", "Sul Goiano", "Sul Maranhense",
+				"SÃ£o Francisco Pernambucano", "SÃ£o JosÃ© do Rio Preto", "TriÃ¢ngulo Mineiro e Alto ParanaÃ­ba",
+				"Vale do Acre", "Vale do ItajaÃ­", "Vale do JuruÃ¡", "Vale do Mucuri", "Vale do ParaÃ­ba Paulista",
+				"Vale do Rio Doce", "Vale SÃ£o - Franciscano da Bahia", "Zona da Mata" };
 		String[] tag = { "TARGET QA" };
 		StringBuilder mesorregiaoAleatorio = new StringBuilder();
 		mesorregiaoAleatorio.append(mesorregiao[new Random().nextInt(137)]).append(" ")
