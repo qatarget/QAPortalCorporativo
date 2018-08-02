@@ -20,7 +20,7 @@ public class DSL {
 	/******** CNPJ, CPF, Pessoa, Empresa e E-mail ***********/
 
 	/**
-	 * Gera CPF AleatÃ³rio com pontos ou sem pontos.
+	 * Gera CPF Aleatório com pontos ou sem pontos.
 	 * 
 	 * @param comPontos
 	 * @return
@@ -102,38 +102,41 @@ public class DSL {
 		return retorno;
 	}
 
-	public String geraNomeAleatorio() {
-		String[] nomes = { "Antonio", "Rafael", "Bruno", "Marcelo", "Alberto", "Pedro", "Anderson", "Airton", "Sidney",
-				"Wilson", "Carlos", "Cï¿½ndido", "Hugo", "Joï¿½o", "Mauro", "Leonardo", "Natanael", "Reinaldo",
-				"Orlando", "Tiago", "Gildo", "Alfredo", "Maurï¿½cio", "Jurandir", "Paulo", "Juvï¿½ncio", "Daniel",
-				"Jair", "Juvenal", "Jorge" };
-		String[] sobrenomes = { "Afonso", "Balera", "Seco", "Vieira", "Mendes", "Miyahira", "Garcia", "Cunha", "Santos",
-				"Flï¿½vio" };
-		String[] ultimoNome = { "Magalhï¿½es", "Alves", "Silva", "Pereira", "Mathias", "Camargo", "Moraes", "Rodrigues",
-				"Fonseca", "Azevedo" };
+	public String geraNomeAleatorio() 
+	{
+            String[] nomes = { "Antonio", "Rafael", "Bruno", "Marcelo", "Alberto",
+                "Pedro", "Anderson", "Airton", "Sidney", "Wilson", "Carlos", "Cândido",
+                "Hugo", "João", "Mauro", "Leonardo", "Natanael", "Reinaldo", "Orlando",
+                "Tiago", "Gildo", "Alfredo", "Maurício", "Jurandir", "Paulo", "Juvêncio",
+                "Daniel", "Jair", "Juvenal", "Jorge", "Agiliza", "Alessandro", "Alexandre", "Aline", "Ana Paula", "Andressa", "Antonia", "Camila", "Carolina",
+            "Cileia", "Debora", "Edna", "Ellen", "Eveline", "Fabio", "Fernanda", "Gesiele", "Hellen", "Isabela", "Joice","Joseense" };
+            String[] sobrenomes = { "Afonso", "Balera", "Seco", "Vieira", "Mendes", "Miyahira",
+                "Garcia", "Cunha", "Santos", "Flávio" };
+            String[] ultimoNome = { "Magalhães", "Alves", "Silva", "Pereira", "Mathias",
+                "Camargo", "Moraes", "Rodrigues", "Fonseca", "Azevedo" };
+            String[] tag = { "TARGET QA" };
+            StringBuilder nomeAleatorio = new StringBuilder();
+            nomeAleatorio.append(nomes[new Random().nextInt(50)]).append(" ")
+                         .append(sobrenomes[new Random().nextInt(9)]).append(" de ")
+                         .append(ultimoNome[new Random().nextInt(9)]).append("")
+                         .append(tag[new Random().nextInt(1)]).append("");
+            return nomeAleatorio.toString();
+        }
 
-		StringBuilder nomeAleatorio = new StringBuilder();
-
-		nomeAleatorio.append(nomes[new Random().nextInt(29)]).append(" ").append(sobrenomes[new Random().nextInt(9)])
-				.append(" de ").append(ultimoNome[new Random().nextInt(9)]).append(" ").append(this.hashCode());
-
-		return nomeAleatorio.toString();
-	}
-
-	public String geraEmpresaAleatorio() {
-		String[] nomes = { "atendimento", "contato", "orcamento", "despesa", "RH", "dp", "recursos.humanos", "deposito",
-				"gerente", "gestor", "diretoria", "almoxarifado", "balconista" };
-		String[] sobrenomes = { "Auto", "Lar", "Seco", "Vieira", "Mendes", "Miyahira", "Garcia", "Cunha", "Santos",
-				"FlÃ¡vio" };
-		String[] ultimoNome = { "LTDA", "ME", "EIRELI", "S/A", "EPP" };
-
-		StringBuilder empresaAleatorio = new StringBuilder();
-
-		empresaAleatorio.append(nomes[new Random().nextInt(13)]).append(" ").append(sobrenomes[new Random().nextInt(9)])
-				.append(" ").append(ultimoNome[new Random().nextInt(5)]).append(" ").append(this.hashCode());
-
-		return empresaAleatorio.toString();
-	}
+	public String geraEmpresaAleatorio() 
+	{
+            String[] empresa = { "Colégio Adventista de Sorocaba", "Colégio Vincere", "Colégio Politécnico de Sorocaba", "Objetivo Sorocaba - unidade Centro", "Colégio Talentos International", "Colégio Salesiano São José",
+                "Colégio Dom Aguirre", "Colégio Primeiro Mundo", "Colégio Humanus", "Colégio Ser", "Colégio Tableau - Sorocaba", "Colégio Sorocaba",
+                "Colégio Veritas", "Colégio Renascer", "Colégio Múltiplo Sorocaba", "Colégio Ivo de Almeida", "Colégio Uirapuru", "COC Sorocaba", "Colégio O Farol" };
+            String[] sociedade = { "LTDA", "ME", "EIRELI", "S/A", "EPP" };
+            String[] tag = { "TARGET QA" };
+            StringBuilder empresaAleatorio = new StringBuilder();
+            empresaAleatorio.append(empresa[new Random().nextInt(18)]).append(" ")
+                            .append(sociedade[new Random().nextInt(4)]).append(" ")
+                            .append(tag[new Random().nextInt(1)]).append("");
+            return empresaAleatorio.toString();
+        }
+	
 
 	public String GeraEmailAleatorio() {
 		String[] nomes = { "administracao", "adgomes", "afpres", "estagio", "ferramentaria", "alberflex", "figueiredo",

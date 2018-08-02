@@ -16,7 +16,7 @@ public class TesteLogin {
 	public void deveRealizarAcessoSistema() throws InterruptedException {		
 		
 		
-		page.url("https://portal-stage.portalcna.com.br");
+		page.url("https://server.target1.com.br:8895");
 		page.aguardaCarregarPagina(3000);
 		page.SetEmail("danilo@dmts.com.br");
 		page.SetSenha("123456");		

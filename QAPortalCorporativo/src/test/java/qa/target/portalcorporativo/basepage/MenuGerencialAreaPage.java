@@ -16,7 +16,7 @@ public class MenuGerencialAreaPage {
 	}
 
 	public void SetDepartamento(String nome) {
-		dsl.escreveTexto(By.name(nome), dsl.GeraDepartamentoAleatorio());
+		dsl.escreveTexto(By.name(nome), dsl.geraDepartamentoAleatorio());
 	}
 
 	public void SetEmail(String campo) 
