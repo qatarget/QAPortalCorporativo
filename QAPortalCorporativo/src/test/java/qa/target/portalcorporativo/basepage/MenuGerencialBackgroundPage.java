@@ -7,22 +7,27 @@ public class MenuGerencialBackgroundPage {
 
 	private DSL dsl = new DSL();
 
-	public void aguardaCarregarPagina(int tempo) throws InterruptedException {
+	public void aguardarCarregar(String tempo) 
+	{
 		dsl.esperaCarregar(tempo);
 	}
-
-	public void SetClicarMenu(By by) {
-		dsl.clicarBotaoBy(by);
+	
+	public void SetclicarMenuGerencial() {
+		dsl.clicarBotaoBy(By.cssSelector(".menu-desktop .click-menu"));
 	}
+	
+	public void SetClicarSubMenu(String menu) {
 
-	public void SetClicar(By by) {
-
-		dsl.clicarBotaoBy(by);
+		dsl.clicarBotaoBy(By.linkText(menu));
+	}
+	
+	public void SetClicarNovoItem() {
+		dsl.clicarBotaoBy(By.cssSelector("[class='btn btn-sm btn-success btn-success-app p-2']"));
+	}
+	
+	public void SetEscreveTitulo(String texto) {
+		dsl.escreveTexto(By.className("titulo"), texto);
 	}
 	
 	
-	public void SetEscreveTexto(By by, String texto) {
-		dsl.escreveTexto(by, texto);
-	}
-
 }
