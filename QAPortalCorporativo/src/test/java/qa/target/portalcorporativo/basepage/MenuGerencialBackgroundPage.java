@@ -7,7 +7,7 @@ public class MenuGerencialBackgroundPage {
 
 	private DSL dsl = new DSL();
 
-	public void aguardarCarregar(String tempo) 
+	public void aguardarCarregar(int tempo) throws InterruptedException 
 	{
 		dsl.esperaCarregar(tempo);
 	}
@@ -29,5 +29,5 @@ public class MenuGerencialBackgroundPage {
 		dsl.escreveTexto(By.className("titulo"), texto);
 	}
 	
-	
+
 }
