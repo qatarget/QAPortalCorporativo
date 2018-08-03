@@ -3,6 +3,7 @@ package qa.target.portalcorporativo.core;
 import java.util.Random;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 
 import qa.target.portalcorporativo.core.DriverFactory;
 
@@ -243,9 +244,23 @@ public class DSL {
 		DriverFactory.getDriver().findElement(by).click();
 	}
 
+	/***
+	 * maximizar Browser
+	 */
 	public void maximizaJanela() {
 
 		DriverFactory.getDriver().manage().window().maximize();
 	}
 
+	/***
+	 * Executa rolagem da página.
+	 * Exemplo: RolarPagina("scroll(0,650)");	  
+	 * @param rolagem
+	 */	 
+	public void RolarPagina(String rolagem)
+    {
+        ((JavascriptExecutor)DriverFactory.getDriver()).executeScript(rolagem);
+    }
+	
+	
 }
