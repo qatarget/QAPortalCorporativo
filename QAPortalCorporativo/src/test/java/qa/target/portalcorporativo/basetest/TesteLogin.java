@@ -16,9 +16,9 @@ public class TesteLogin {
 	public void deveRealizarAcessoSistema() throws InterruptedException {		
 		
 		
-		page.url("https://server.target1.com.br:8895");
+		page.url("http://server.target1.com.br:8895/");
 		page.aguardaCarregarPagina(3000);
-		page.SetEmail("danilo@dmts.com.br");
+		page.SetEmail("danilozanutto@gmail.com");
 		page.SetSenha("123456");		
 		page.ClicaBotao();
 		page.aguardaCarregarPagina(3000);
