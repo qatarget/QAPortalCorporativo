@@ -29,5 +29,7 @@ public class MenuGerencialBackgroundPage {
 		dsl.escreveTexto(By.className("titulo"), texto);
 	}
 	
-
+	public void SetRolarPagina(String rolagem) {
+		dsl.RolarPagina(rolagem);
+	}
 }

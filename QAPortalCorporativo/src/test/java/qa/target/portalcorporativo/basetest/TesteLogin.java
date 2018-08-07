@@ -1,13 +1,10 @@
 package qa.target.portalcorporativo.basetest;
-import qa.target.portalcorporativo.core.DSL;
-import qa.target.portalcorporativo.core.DriverFactory;
 import org.junit.Test;
 
 import qa.target.portalcorporativo.basepage.loginPage;
 
 public class TesteLogin {
 
-	private DSL dsl = new DSL();
 	private loginPage page = new loginPage();
 	
 	
