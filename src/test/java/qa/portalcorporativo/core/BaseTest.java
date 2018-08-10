@@ -23,11 +23,15 @@ public class BaseTest {
 	private LoginPage page = new LoginPage();
 	
 	@Before
-	public void inicializa() {
+	public void inicializa() throws InterruptedException {
 		page.acessarTelaInicial();
 		page.SetEmail("danilozanutto@gmail.com");
 		page.SetSenha("123456");
 		page.entrar();
+		page.aguardaCarregarPagina(2000);
+		page.selecionarEscola();
+		page.entrar();
+		page.aguardaCarregarPagina(2000);
 	}
 	
 	@After
