@@ -343,4 +343,17 @@ public class BasePage {
 		((JavascriptExecutor) getDriver()).executeScript("scroll(0,400)");
 	}
 
+	/***
+	 * Gera títulos aleatorios.
+	 * 
+	 * @return
+	 */
+	public String GerarTituloAleatorio() {
+		String[] Titulo = { "CNA na Escola pública", "CNA Go", "Don't Bee Loro", " CNA Portal Corporativo" };
+
+		StringBuilder TituloAleatorio = new StringBuilder();
+		TituloAleatorio.append(Titulo[new Random().nextInt(4)]).append(" ");
+		return TituloAleatorio.toString();
+	}
+
 }

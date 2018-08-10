@@ -11,25 +11,38 @@ public class MenuGerencialBackgroungPage extends BasePage {
 		esperaCarregar(tempo);
 	}
 	
-	public void SetclicarMenuGerencial() {
+	public void SetclicarMenuGerencial() throws InterruptedException {
+		esperaCarregar(5000);
 		clicarBotaoBy(By.cssSelector(".menu-desktop .click-menu"));
 	}
 	
-	public void SetClicarSubMenu(String menu) {
-
-		clicarBotaoBy(By.linkText(menu));
+	public void SetClicarSubMenu() throws InterruptedException {
+		
+		esperaCarregar(2000);
+		clicarBotaoBy(By.linkText("BACKGROUND"));
 	}
 	
-	public void SetClicarNovoItem() {
+	public void SetClicarNovoItem() throws InterruptedException {
+		
+		esperaCarregar(2000);
 		clicarBotaoBy(By.cssSelector("[class='btn btn-sm btn-success btn-success-app p-2']"));
 	}
 	
-	public void SetEscreveTitulo(String texto) {
-		escreveTexto(By.className("titulo"), texto);
+	public void SetEscreveTitulo() throws InterruptedException {
+		
+		esperaCarregar(2000);
+		//clicarBotaoBy(By.name("titulo"));
+		escreveTexto(By.name("titulo"), GerarTituloAleatorio());
 	}
 	
 	public void SetRolarPagina(String rolagem) {
 		RolarPagina(rolagem);
+	}
+	
+	public void SetProcurarImage() {
+		
+		clicarBotaoBy(By.xpath("//button[contains(text(),'Procurar')]"));
+		
 	}
 
 }
