@@ -33,13 +33,13 @@ public class MenuGerencialAreaPage extends BasePage {
 
 	public void SetClicarSubMenu() {
 
-		clicarBotaoBy(By.linkText("ÁREA"));
+		clicarBotaoBy(By.linkText("Ã�REA"));
 	}
 
 	public void SetSelecionarCombo() throws InterruptedException {
 		
 		aguardarCarregarPagina(2000);
-		clicarBotaoBy(By.xpath("//li[contains(text(),'Expansão')]"));
+		clicarBotaoBy(By.xpath("//li[contains(text(),'ExpansÃ£o')]"));
 	}
 
 	public void SetClicarBotaoSalvar() throws InterruptedException {

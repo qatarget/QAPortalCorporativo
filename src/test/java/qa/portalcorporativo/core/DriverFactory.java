@@ -2,7 +2,7 @@ package qa.portalcorporativo.core;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 public class DriverFactory {
 
@@ -24,12 +24,9 @@ public class DriverFactory {
 	public static WebDriver initDriver() {
 		WebDriver driver = null;
 		switch (Propriedades.browser) {
-		case FIREFOX:
-			System.setProperty("webdriver.gecko.driver","/usr/local/bin/driver/geckodriver");
-			driver = new FirefoxDriver();
-			break;
+		
 		case CHROME:
-			System.setProperty("webdriver.chrome.driver", "/usr/local/bin/driver/chromedriver");
+			//System.setProperty("webdriver.chrome.driver", "/usr/local/bin/driver/chromedriver");
 			driver = new ChromeDriver();
 			break;
 		}
