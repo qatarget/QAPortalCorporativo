@@ -28,6 +28,10 @@ public class MenuGerencialBackgroungPage extends BasePage {
 		clicarBotaoBy(By.cssSelector("[class='btn btn-sm btn-success btn-success-app p-2']"));
 	}
 	
+	/***
+	 * Gera título automaticamente.
+	 * @throws InterruptedException
+	 */
 	public void SetEscreveTitulo() throws InterruptedException {
 		
 		esperaCarregar(2000);
