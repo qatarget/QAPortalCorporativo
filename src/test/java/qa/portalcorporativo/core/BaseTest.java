@@ -1,7 +1,7 @@
 package qa.portalcorporativo.core;
 
 import static qa.portalcorporativo.core.DriverFactory.getDriver;
-import static qa.portalcorporativo.core.DriverFactory.killDriver;
+//import static qa.portalcorporativo.core.DriverFactory.killDriver;
 import qa.portalcorporativo.page.LoginPage;
 import java.io.File;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class BaseTest {
 		page.aguardaCarregarPagina(2000);
 		page.selecionarEscola();
 		page.entrar();
-		page.aguardaCarregarPagina(2000);
+		page.aguardaCarregarPagina(6000);
 	}
 
 	@After
@@ -41,9 +41,9 @@ public class BaseTest {
 		FileUtils.copyFile(print, new File("target" + File.separator + "screenshot" + File.separator
 				+ testName.getMethodName() +  ".jpg"));
 
-		if (Propriedades.FECHAR_BROWSER) {
-			killDriver();
-		}
+	//	if (Propriedades.FECHAR_BROWSER) {
+		//	killDriver();
+	//	}
 	}
 
 }

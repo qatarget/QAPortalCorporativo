@@ -34,14 +34,13 @@ public class DriverFactory {
 		return driver;
 	}
 
-	public static void killDriver() {
-		WebDriver driver = getDriver();
-		if (driver != null) {
-			driver.quit();
-			driver = null;
-		}
-		if (threadDriver != null) {
-			threadDriver.remove();
-		}
-	}
+	//public static void killDriver() {
+	//	WebDriver driver = getDriver();
+	//	if (driver != null) {
+	//		driver = null;
+	//}
+	//	if (threadDriver != null) {
+	//		threadDriver.remove();
+	//	}
+	//}
 }
