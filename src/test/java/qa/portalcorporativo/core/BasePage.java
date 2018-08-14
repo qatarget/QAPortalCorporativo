@@ -1,5 +1,6 @@
 package qa.portalcorporativo.core;
 
+import java.sql.Driver;
 import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -356,4 +357,5 @@ public class BasePage {
 		return TituloAleatorio.toString();
 	}
 
+	
 }
