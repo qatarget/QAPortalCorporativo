@@ -22,4 +22,40 @@ public class MenuGerencialTagPage extends BasePage {
 		
 		
 	}
+	
+	
+	public void SetEscreverNome() throws InterruptedException {
+		Thread.sleep(1000);
+		clicarBotaoBy(By.cssSelector(".form-control.ng-touched"));
+		Thread.sleep(2000);
+		escreveTexto(By.cssSelector(".form-control.ng-touched"), geraNomeAleatorio());
+		Thread.sleep(1000);
+		
+	}
+	
+	public void SetSelecionarCategoria () throws InterruptedException{
+		Thread.sleep(1000);
+		clicarBotaoBy(By.cssSelector(".ng-touched .select2-selection__arrow"));
+		Thread.sleep(1000);
+	}
+	
+	public void SetCategoria () throws InterruptedException {
+		Thread.sleep(1000);
+		clicarBotaoBy(By.cssSelector(".select2-search__field"));
+		Thread.sleep(1000);
+		escreveTexto(By.cssSelector(".select2-search__field"), "texto");
+		Thread.sleep(1000);
+	}
+	
+	public void SetAtivo () throws InterruptedException {
+		Thread.sleep(1000);
+		clicarBotaoBy(By.cssSelector("[formcontrolname='ehAtivo']"));
+		Thread.sleep(1000);
+		}
+	
+	public void SetClicarSalvar () throws InterruptedException {
+		Thread.sleep(1000);
+		clicarBotaoBy(By.cssSelector("app-tag [aria-hidden] .btn-success-app"));
+		Thread.sleep(1000);
+	}
 }
